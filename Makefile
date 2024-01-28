@@ -31,7 +31,7 @@ maindloop: $(LIBCLASSLOOPS).so main.c
 maindrec: $(LIBCLASSRECURSIVE).so main.c
 	$(CC) $(CFLAGS) -o $@ main.c -L. -l$(CLASSRECURSIVE)
 
-.PHONY: all clean loops recursives recursived loopd mains maindloop maindrec
+.PHONY: all clean loops recursives recursived loopd  
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $^
