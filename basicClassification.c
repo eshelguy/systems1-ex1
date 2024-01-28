@@ -5,7 +5,7 @@ BOOL isPrime(int num) {
         return FALSE;  // 0 is not prime numbers
     }
 
-    if (num == 2) {
+    if (num <= 2) {
         return TRUE; // 1 and 2 are prime number
     }
 
