@@ -9,7 +9,7 @@ CLASSRECURSIVE = classrec
 LIBCLASSLOOPS = lib$(CLASSLOOPS)
 LIBCLASSRECURSIVE = lib$(CLASSRECURSIVE)
 
-all: loops loopd recursives recursived	mains maindloop maindrec
+all: loops loopd recursives recursived mains maindloop maindrec
 
 clean:
 	rm -f *.a *.so *.o main mains maindloop maindrec
