@@ -22,14 +22,14 @@ recursives: $(LIBCLASSRECURSIVE).a
 
 recursived: $(LIBCLASSRECURSIVE).so
 
-mains: $(LIBCLASSRECURSIVE).a main.c
-	$(CC) $(CFLAGS) -o $@ main.c -L. -static -l$(CLASSRECURSIVE)
+mains: $(LIBCLASSRECURSIVE).a main.o
+	$(CC) $(CFLAGS) -o $@ main.o -L. -static -l$(CLASSRECURSIVE)
 
-maindloop: $(LIBCLASSLOOPS).so main.c
-	$(CC) $(CFLAGS) -o $@ main.c -L. -l$(CLASSLOOPS)
+maindloop: $(LIBCLASSLOOPS).so main.o
+	$(CC) $(CFLAGS) -o $@ main.o -L. -l$(CLASSLOOPS)
 
-maindrec: $(LIBCLASSRECURSIVE).so main.c
-	$(CC) $(CFLAGS) -o $@ main.c -L. -l$(CLASSRECURSIVE)
+maindrec: $(LIBCLASSRECURSIVE).so main.o
+	$(CC) $(CFLAGS) -o $@ main.o -L. -l$(CLASSRECURSIVE)
 
 .PHONY: all clean loops recursives recursived loopd mains maindloop maindrec
 
