@@ -1,12 +1,12 @@
 #include "NumClass.h"
 
 BOOL isPrime(int num) {
-    if (num <= 1) {
-        return FALSE;  // 0 and 1 are not prime numbers
+    if (num < 1) {
+        return FALSE;  // 0 is not prime numbers
     }
 
-    if (num == 2) {
-        return TRUE; // 2 is a prime number
+    if (num == 1 || num == 2) {
+        return TRUE; // 1 and 2 are prime number
     }
 
     // Quick check, not sure if serves any benefit
