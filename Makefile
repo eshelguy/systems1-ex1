@@ -43,7 +43,7 @@ libclassrec.a: $(BASICCLASSIFICATION).o $(ADVANCEDCLASSIFICATION)Recursion.o
 	ar rcs $@ $^
 
 libclassrec.so: $(BASICCLASSIFICATION).o $(ADVANCEDCLASSIFICATION)Recursion.o
-	$(CC) $(CFLAGS) -shared fPIC -o $@ $^
+	$(CC) $(CFLAGS) -shared -fPIC -o $@ $^
 
 libclassloops.so: $(BASICCLASSIFICATION).o $(ADVANCEDCLASSIFICATION)Loop.o
-	$(CC) $(CFLAGS) -shared fPIC -o $@ $^
+	$(CC) $(CFLAGS) -shared -fPIC -o $@ $^
